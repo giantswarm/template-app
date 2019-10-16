@@ -1,10 +1,10 @@
-[![CircleCI](https://circleci.com/gh/giantswarm/aqua-app.svg?style=shield)](https://circleci.com/gh/giantswarm/aqua-app)
+[![CircleCI](https://circleci.com/gh/giantswarm/<APP-NAME>-app.svg?style=shield)](https://circleci.com/gh/giantswarm/<APP-NAME>-app)
 
-# aqua-app chart
+# <APP-NAME>-app chart
 
-Giant Swarm offers a Aqua Managed App which can be installed in tenant clusters.
-Here we define the Aqua chart with its templates and default configuration.
+Giant Swarm offers a <APP-NAME> Managed App which can be installed in tenant clusters.
+Here we define the <APP-NAME> chart with its templates and default configuration.
 
 ## Credit
 
-* https://github.com/aquasecurity/aqua-helm
+* <APP GITHUB REPOSITORY>
