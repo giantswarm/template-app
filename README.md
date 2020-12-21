@@ -20,7 +20,7 @@ There are 3 ways to install this app onto a tenant cluster.
 ## Configuring
 
 ### values.yaml
-**This is an example of the values file you could upload using our web interface.**
+**This is an example of a values file you could upload using our web interface.**
 ```
 # values.yaml
 
@@ -49,13 +49,13 @@ See our [full reference page on how to configure applications](https://docs.gian
 ## Compatability
 
 This app has been tested to work with the following tenant cluster release versions:
-- 
+* 
 
-## Limitations
+## Limitations  
 
 Some apps have restrictions on how they can be deployed.
 Not following these limitations will most likely result in a broken deployment.
-- 
+* 
 
 ## Credit
 
