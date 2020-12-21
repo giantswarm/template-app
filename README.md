@@ -30,7 +30,7 @@ There are 3 ways to install this app onto a tenant cluster.
 If you have access to the Kubernetes API on the Control Plane, you could create
 the App CR and ConfigMap directly.
 
-Here is an example that would install the nginx-ingress-controller-app to
+Here is an example that would install the app to
 tenant cluster `abc12`:
 
 ```
