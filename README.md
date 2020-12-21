@@ -5,11 +5,11 @@
 Giant Swarm offers a {APP-NAME} App which can be installed in tenant clusters.
 Here we define the {APP-NAME} chart with its templates and default configuration.
 
-Basic info:
-**What is it?**
-**Why did we add it?**
-**Who can use it?**
-**How to use it?**
+Basic info:  
+**What is it?**  
+**Why did we add it?**  
+**Who can use it?**  
+**How to use it?**  
 
 ## Installing
 
