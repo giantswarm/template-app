@@ -5,9 +5,9 @@
 Giant Swarm offers a {APP-NAME} App which can be installed in tenant clusters.
 Here we define the {APP-NAME} chart with its templates and default configuration.
 
-**What is this app?**  
-**Why did we add it?**  
-**Who can use it?**  
+**What is this app?**
+**Why did we add it?**
+**Who can use it?**
 
 ## Installing
 
@@ -46,16 +46,18 @@ tenant cluster `abc12`:
 
 See our [full reference page on how to configure applications](https://docs.giantswarm.io/reference/app-configuration/) for more details.
 
-## Compatability
+## Compatibility
 
 This app has been tested to work with the following tenant cluster release versions:
-* 
 
-## Limitations  
+*
+
+## Limitations
 
 Some apps have restrictions on how they can be deployed.
 Not following these limitations will most likely result in a broken deployment.
-* 
+
+*
 
 ## Credit
 
