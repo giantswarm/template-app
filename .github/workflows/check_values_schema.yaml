@@ -17,7 +17,7 @@ jobs:
           VALUES_FILE_CHANGED="false"
           SCHEMA_FILE_CHANGED="false"
 
-          if find -name values.schema.json | grep -q "values.schema.json" ; then
+          if git ls-tree -r ${{ github.ref }} | grep -q "values.schema.json" ; then
 
             if grep -q "values.yaml" <<< "${{ steps.files.outputs.all }}" ; then
               VALUES_FILE_CHANGED="true"
