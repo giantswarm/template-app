@@ -7,6 +7,7 @@ workflows:
     jobs:
       - architect/push-to-app-catalog:
           context: "architect"
+          # executor: "app-build-suite" # uncomment this if you want automatic metadata generation
           name: "package and push {APP-NAME} chart"
           app_catalog: "giantswarm-playground-catalog"
           app_catalog_test: "giantswarm-playground-test-catalog"
