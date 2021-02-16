@@ -13,9 +13,9 @@ Here we define the {APP-NAME} chart with its templates and default configuration
 
 There are 3 ways to install this app onto a tenant cluster.
 
-1. [Using our web interface](https://docs.giantswarm.io/reference/web-interface/app-catalog/)
+1. [Using our web interface](https://docs.giantswarm.io/ui-api/web/app-platform/#installing-an-app)
 2. [Using our API](https://docs.giantswarm.io/api/#operation/createClusterAppV5)
-3. Directly creating the App custom resource on the Control Plane.
+3. Directly creating the [App custom resource](https://docs.giantswarm.io/ui-api/management-api/crd/apps.application.giantswarm.io/) on the management cluster.
 
 ## Configuring
 
@@ -26,8 +26,8 @@ There are 3 ways to install this app onto a tenant cluster.
 
 ```
 
-### Sample App CR and ConfigMap for the Control Plane
-If you have access to the Kubernetes API on the Control Plane, you could create
+### Sample App CR and ConfigMap for the management cluster
+If you have access to the Kubernetes API on the management cluster, you could create
 the App CR and ConfigMap directly.
 
 Here is an example that would install the app to
@@ -44,7 +44,7 @@ tenant cluster `abc12`:
 
 ```
 
-See our [full reference page on how to configure applications](https://docs.giantswarm.io/reference/app-configuration/) for more details.
+See our [full reference page on how to configure applications](https://docs.giantswarm.io/app-platform/app-configuration/) for more details.
 
 ## Compatibility
 
