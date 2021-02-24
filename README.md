@@ -2,7 +2,7 @@
 
 # {APP-NAME} chart
 
-Giant Swarm offers a {APP-NAME} App which can be installed in tenant clusters.
+Giant Swarm offers a {APP-NAME} App which can be installed in workload clusters.
 Here we define the {APP-NAME} chart with its templates and default configuration.
 
 **What is this app?**
@@ -11,7 +11,7 @@ Here we define the {APP-NAME} chart with its templates and default configuration
 
 ## Installing
 
-There are 3 ways to install this app onto a tenant cluster.
+There are 3 ways to install this app onto a workload cluster.
 
 1. [Using our web interface](https://docs.giantswarm.io/ui-api/web/app-platform/#installing-an-app)
 2. [Using our API](https://docs.giantswarm.io/api/#operation/createClusterAppV5)
@@ -31,7 +31,7 @@ If you have access to the Kubernetes API on the management cluster, you could cr
 the App CR and ConfigMap directly.
 
 Here is an example that would install the app to
-tenant cluster `abc12`:
+workload cluster `abc12`:
 
 ```
 # appCR.yaml
@@ -48,7 +48,7 @@ See our [full reference page on how to configure applications](https://docs.gian
 
 ## Compatibility
 
-This app has been tested to work with the following tenant cluster release versions:
+This app has been tested to work with the following workload cluster release versions:
 
 *
 
