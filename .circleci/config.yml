@@ -1,13 +1,13 @@
 version: 2.1
 orbs:
-  architect: giantswarm/architect@4.1.0
+  architect: giantswarm/architect@4.4.0
 
 workflows:
   package-and-push-chart-on-tag:
     jobs:
       - architect/push-to-app-catalog:
           context: "architect"
-          # executor: "app-build-suite" # uncomment this if you want automatic metadata generation
+          # executor: "app-build-suite" # uncomment this if you want automatic metadata generation and helm chart linting
           name: "package and push {APP-NAME} chart"
           app_catalog: "giantswarm-playground-catalog"
           app_catalog_test: "giantswarm-playground-test-catalog"
