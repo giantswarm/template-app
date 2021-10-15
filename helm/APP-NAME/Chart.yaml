@@ -7,7 +7,7 @@ home: https://github.com/giantswarm/{APP-NAME}-app
 
 # If you have an icon/logo, you should add it to https://github.com/giantswarm/web-assets
 # and set the final URL as a value here and uncomment.
-#icon: https://example.com/icon.svg
+#icon: https://s.giantswarm.io/app-icons/example-app/1/light.svg
 
 sources:
 - https://github.com/some-org/some-repo
