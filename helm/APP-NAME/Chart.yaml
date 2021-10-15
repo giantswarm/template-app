@@ -1,10 +1,15 @@
 apiVersion: v1
 appVersion: 0.0.1
+name: {APP-NAME}
 description: A Helm chart for {APP-NAME}
 engine: gotpl
 home: https://github.com/giantswarm/{APP-NAME}-app
-icon: https://s.giantswarm.io/app-icons/1/png/default-app-light.png
-name: {APP-NAME}
+
+# If you have an icon/logo, you can add it to the app repo
+# or to https://github.com/giantswarm/web-assets
+# and set the URL here and uncomment.
+#icon: https://example.com/icon.svg
+
 sources:
 - https://github.com/some-org/some-repo
 version: 0.1.0 # [[ .Version ]] if you're using architect instead of app-build-suite
