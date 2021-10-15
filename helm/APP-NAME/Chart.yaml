@@ -5,9 +5,8 @@ description: A Helm chart for {APP-NAME}
 engine: gotpl
 home: https://github.com/giantswarm/{APP-NAME}-app
 
-# If you have an icon/logo, you can add it to the app repo
-# or to https://github.com/giantswarm/web-assets
-# and set the URL here and uncomment.
+# If you have an icon/logo, you should add it to https://github.com/giantswarm/web-assets
+# and set the final URL as a value here and uncomment.
 #icon: https://example.com/icon.svg
 
 sources:
