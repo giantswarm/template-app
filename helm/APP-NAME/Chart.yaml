@@ -1,7 +1,12 @@
 apiVersion: v1
 appVersion: 0.0.1
+
+# Please make sure your name DOES NOT end in "app" or "-app".
 name: {APP-NAME}
-description: A Helm chart for {APP-NAME}
+
+# Please describe what the app provides in a sentence or two.
+description: Please add description
+
 engine: gotpl
 home: https://github.com/giantswarm/{APP-NAME}-app
 
