@@ -15,7 +15,7 @@ home: https://github.com/giantswarm/{APP-NAME}-app
 
 sources:
 - https://github.com/some-org/some-repo
-version: 0.1.0 # [[ .Version ]] if you're using architect instead of app-build-suite
+version: 0.0.0-dev # [[ .Version ]] if you're using architect instead of app-build-suite
 annotations:
   branch: my-branch # Used through .Chart.Annotations.branch (This is not replaced automatically)
   commit: f00bar # Used through .Chart.Annotations.commit (This is not replaced automatically)
