@@ -9,6 +9,13 @@ Expand the name of the chart.
 {{- end -}}
 
 {{/*
+Expand the namemespace of the resources.
+*/}}
+{{- define "namespace" -}}
+{{- .Release.Namespace -}}
+{{- end -}}
+
+{{/*
 Create chart name and version as used by the chart label.
 */}}
 {{- define "chart" -}}

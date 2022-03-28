@@ -1,7 +1,6 @@
 # TEMPLATE-APP: This is set as a reasonable default, feel free to change.
 
 name: {APP-NAME}
-namespace: kube-system
 serviceType: managed
 
 project:
