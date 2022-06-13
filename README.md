@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/giantswarm/{APP-NAME}-app.svg?style=shield)](https://circleci.com/gh/giantswarm/{APP-NAME}-app)
+[![CircleCI](https://circleci.com/gh/giantswarm/{APP-NAME}.svg?style=shield)](https://circleci.com/gh/giantswarm/{APP-NAME})
 
 # {APP-NAME} chart
 
