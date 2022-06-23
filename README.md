@@ -1,5 +1,7 @@
 [![CircleCI](https://circleci.com/gh/giantswarm/{APP-NAME}.svg?style=shield)](https://circleci.com/gh/giantswarm/{APP-NAME})
 
+[Read me after cloning this template (GS staff only)](https://intranet.giantswarm.io/docs/dev-and-releng/app-developer-processes/adding_app_to_appcatalog/)
+
 # {APP-NAME} chart
 
 Giant Swarm offers a {APP-NAME} App which can be installed in workload clusters.
