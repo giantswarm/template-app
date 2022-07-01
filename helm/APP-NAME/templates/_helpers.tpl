@@ -27,9 +27,9 @@ Common labels
 {{- define "labels.common" -}}
 {{ include "labels.selector" . }}
 app.giantswarm.io/branch: {{ .Chart.Annotations.branch | replace "#" "-" | replace "/" "-" | replace "." "-" | trunc 63 | trimSuffix "-" | quote }}
-app.giantswarm.io/commit: {{ .Chart.Annotations.commit | quote }}
-app.kubernetes.io/managed-by: {{ .Release.Service | quote }}
-app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
+application.giantswarm.io/commit: {{ .Chart.Annotations.commit | quote }}
+application.kubernetes.io/managed-by: {{ .Release.Service | quote }}
+application.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 application.giantswarm.io/team: {{ index .Chart.Annotations "application.giantswarm.io/team" | quote }}
 giantswarm.io/managed-by: {{ .Release.Name | quote }}
 giantswarm.io/service-type: {{ .Values.serviceType }}
