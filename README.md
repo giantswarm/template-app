@@ -17,6 +17,7 @@ Here we define the {APP-NAME} chart with its templates and default configuration
 
 There are several ways to install this app onto a workload cluster.
 
+- [Using GitOps to instantiate the App](https://docs.giantswarm.io/advanced/gitops/#installing-managed-apps)
 - [Using our web interface](https://docs.giantswarm.io/ui-api/web/app-platform/#installing-an-app).
 - By creating an [App resource](https://docs.giantswarm.io/ui-api/management-api/crd/apps.application.giantswarm.io/) in the management cluster as explained in [Getting started with App Platform](https://docs.giantswarm.io/app-platform/getting-started/).
 
