@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/giantswarm/{APP-NAME}.svg?style=shield)](https://circleci.com/gh/giantswarm/{APP-NAME})
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/giantswarm/cluster-test-suites/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/giantswarm/cluster-test-suites/tree/main)
 
 [Read me after cloning this template (GS staff only)](https://handbook.giantswarm.io/docs/dev-and-releng/app-developer-processes/adding_app_to_appcatalog/)
 
@@ -17,9 +17,9 @@ Here we define the {APP-NAME} chart with its templates and default configuration
 
 There are several ways to install this app onto a workload cluster.
 
-- [Using GitOps to instantiate the App](https://docs.giantswarm.io/advanced/gitops/#installing-managed-apps)
-- [Using our web interface](https://docs.giantswarm.io/ui-api/web/app-platform/#installing-an-app).
-- By creating an [App resource](https://docs.giantswarm.io/ui-api/management-api/crd/apps.application.giantswarm.io/) in the management cluster as explained in [Getting started with App Platform](https://docs.giantswarm.io/app-platform/getting-started/).
+- [Using GitOps to instantiate the App](https://docs.giantswarm.io/advanced/gitops/apps/)
+- [Using our web interface](https://docs.giantswarm.io/platform-overview/web-interface/app-platform/#installing-an-app).
+- By creating an [App resource](https://docs.giantswarm.io/use-the-api/management-api/crd/apps.application.giantswarm.io/) in the management cluster as explained in [Getting started with App Platform](https://docs.giantswarm.io/getting-started/app-platform/).
 
 ## Configuring
 
@@ -50,7 +50,7 @@ workload cluster `abc12`:
 
 ```
 
-See our [full reference on how to configure apps](https://docs.giantswarm.io/app-platform/app-configuration/) for more details.
+See our [full reference on how to configure apps](https://docs.giantswarm.io/getting-started/app-platform/app-configuration/) for more details.
 
 ## Compatibility
 
