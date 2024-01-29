@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- fixed: Move pss values under the global property
 - changed: `app.giantswarm.io` label group was changed to `application.giantswarm.io`
 
 [Unreleased]: https://github.com/giantswarm/{APP-NAME}/tree/main
