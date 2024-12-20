@@ -5,7 +5,7 @@
 # {APP-NAME} chart
 
 Giant Swarm offers a {APP-NAME} App which can be installed in workload clusters.
-Here we define the {APP-NAME} chart with its templates and default configuration.
+Here, we define the {APP-NAME} chart with its templates and default configuration.
 
 **What is this app?**
 
@@ -17,9 +17,8 @@ Here we define the {APP-NAME} chart with its templates and default configuration
 
 There are several ways to install this app onto a workload cluster.
 
-- [Using GitOps to instantiate the App](https://docs.giantswarm.io/advanced/gitops/apps/)
-- [Using our web interface](https://docs.giantswarm.io/platform-overview/web-interface/app-platform/#installing-an-app).
-- By creating an [App resource](https://docs.giantswarm.io/use-the-api/management-api/crd/apps.application.giantswarm.io/) in the management cluster as explained in [Getting started with App Platform](https://docs.giantswarm.io/getting-started/app-platform/).
+- [Using GitOps to instantiate the App](https://docs.giantswarm.io/tutorials/continuous-deployment/apps/add-appcr/)
+- By creating an [App resource](https://docs.giantswarm.io/reference/platform-api/crd/apps.application.giantswarm.io) using the platform API as explained in [Getting started with App Platform](https://docs.giantswarm.io/tutorials/fleet-management/app-platform/).
 
 ## Configuring
 
@@ -34,11 +33,9 @@ There are several ways to install this app onto a workload cluster.
 
 ### Sample App CR and ConfigMap for the management cluster
 
-If you have access to the Kubernetes API on the management cluster, you could create
-the App CR and ConfigMap directly.
+If you have access to the Kubernetes API on the management cluster, you could create the App CR and ConfigMap directly.
 
-Here is an example that would install the app to
-workload cluster `abc12`:
+Here is an example that would install the app to workload cluster `abc12`:
 
 ```yaml
 # appCR.yaml
@@ -50,7 +47,7 @@ workload cluster `abc12`:
 
 ```
 
-See our [full reference on how to configure apps](https://docs.giantswarm.io/getting-started/app-platform/app-configuration/) for more details.
+See our [full reference on how to configure apps](https://docs.giantswarm.io/tutorials/fleet-management/app-platform/app-configuration/) for more details.
 
 ## Compatibility
 
