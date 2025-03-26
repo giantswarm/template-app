@@ -1,0 +1,61 @@
+name: Post-Create Setup
+
+on:
+  push:
+    branches:
+      - main  # Ensure this matches the default branch of your template
+
+jobs:
+  setupRepo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Git
+        run: |
+          git config --global user.name "${{ github.actor }}"
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+
+      - name: Replace {APP-NAME} with repository name
+        run: |
+          repo_name=${{ github.event.repository.name }}
+          grep -rl '{APP-NAME}' . | xargs sed -i "s/{APP-NAME}/$repo_name/g"
+
+      - name: Commit changes for replacing {APP-NAME}
+        run: |
+          git checkout -b replace-app-name
+          git add .
+          git commit -m "Replace {APP-NAME} with repository name"
+          git push origin replace-app-name
+
+      - name: Create Pull Request for replacing {APP-NAME}
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: replace-app-name
+          title: "Replace {APP-NAME} with repository name"
+          body: |
+            This pull request replaces all instances of {APP-NAME} with the actual repository name.
+          delete-branch: true
+          labels: enhancement
+
+      - name: Prepare branch to remove GitHub Action
+        run: |
+          git checkout main
+          git checkout -b remove-post-create-action
+          rm .github/workflows/post-create.yml
+          git add .github/workflows/post-create.yml
+          git commit -m "Remove post-create GitHub Action"
+          git push origin remove-post-create-action
+
+      - name: Create Pull Request to remove GitHub Action
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: remove-post-create-action
+          title: "Cleanup: Remove post-create GitHub Action"
+          body: |
+            This pull request removes the post-create GitHub Action now that the necessary setup is complete.
+          delete-branch: true
+          labels: cleanup
