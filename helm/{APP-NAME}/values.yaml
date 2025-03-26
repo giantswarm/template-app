@@ -1,12 +1,6 @@
-name: {APP-NAME}
-serviceType: managed
-
-project:
-  branch: "[[ .Branch ]]"
-  commit: "[[ .SHA ]]"
-
+# This file is a Helm values file for the {APP-NAME} chart.
 image:
-  registry: quay.io
-  name: giantswarm/{APP-NAME}
-  tag: v0.0.1
-  pullPolicy: IfNotPresent
+  name: "giantswarm/{APP-NAME}"
+  tag: ""
+registry:
+  domain: gsoci.azurecr.io
