@@ -1,0 +1,27 @@
+name: Create First Release
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  createReleaseBranch:
+    if: github.event.pull_request.merged == true && github.event.pull_request.title == 'Cleanup: Remove post-create GitHub Action'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Ensure full history is fetched for branch operations
+
+      - name: Set up Git
+        run: |
+          git config --global user.name "${{ github.actor }}"
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+
+      - name: Create release branch
+        run: |
+          git checkout main
+          git pull origin main
+          git checkout -b main#release#v0.0.1
+          git push origin main#release#v0.0.1
