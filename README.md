@@ -1,4 +1,5 @@
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/giantswarm/{APP-NAME}/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/giantswarm/{APP-NAME}/tree/main)
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/giantswarm/{APP-NAME}/badge)](https://securityscorecards.dev/viewer/?uri=github.com/giantswarm/{APP-NAME})
 
 [Guide about how to manage an app on Giant Swarm](https://handbook.giantswarm.io/docs/dev-and-releng/app-developer-processes/adding_app_to_appcatalog/)
 
