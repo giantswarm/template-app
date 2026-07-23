@@ -29,3 +29,9 @@ annotations:
   io.giantswarm.application.managed: "false"
   # used through .Chart.Annotations . Please replace TEAM-NAME with your team's short name, e. g. 'shield'  for team-shield
   io.giantswarm.application.team: TEAM-NAME
+  # Metadata for artifacthub.io, where Giant Swarm publishes all public charts
+  # (see https://github.com/giantswarm/roadmap/issues/3940)
+  artifacthub.io/license: Apache-2.0
+  artifacthub.io/links: |
+    - name: Support
+      url: https://github.com/giantswarm/{APP-NAME}/issues
