@@ -15,7 +15,8 @@ description: Please add description
 # URL of the GitHub repository that is the source of this Chart.yaml file.
 home: https://github.com/giantswarm/{APP-NAME}
 
-# If you have an icon/logo, you should add it to https://github.com/giantswarm/web-assets
+# Default Giant Swarm icon, so that the first build passes the icon checks.
+# Replace it with the app's own icon: add it to https://github.com/giantswarm/web-assets
 # and set the final URL here.
 icon: https://s.giantswarm.io/app-icons/giantswarm/1/light.svg
 
@@ -27,8 +28,9 @@ annotations:
   io.giantswarm.application.audience: all
   # Adapt to 'true' if Giant Swarm takes responsibility for this app where it's deplyed
   io.giantswarm.application.managed: "false"
-  # used through .Chart.Annotations . Please replace TEAM-NAME with your team's short name, e. g. 'shield'  for team-shield
-  io.giantswarm.application.team: TEAM-NAME
+  # Team owning this app, used through .Chart.Annotations in templates/_helpers.tpl.
+  # {TEAM-NAME} is a placeholder for the team's short name, e.g. 'shield' for team-shield.
+  io.giantswarm.application.team: "{TEAM-NAME}"
   # Metadata for artifacthub.io, where Giant Swarm publishes all public charts
   # (see https://github.com/giantswarm/roadmap/issues/3940)
   artifacthub.io/license: Apache-2.0
