@@ -3,6 +3,24 @@
 
 [Guide about how to manage an app on Giant Swarm](https://handbook.giantswarm.io/docs/dev-and-releng/app-developer-processes/adding_app_to_appcatalog/)
 
+## Creating a repository from this template
+
+A repository is created from this template by the repository set-up engine (`devctl`), which replaces the
+placeholders below and pushes the result as the first commit. When copying by hand, replace them yourself.
+
+| Placeholder | Where | Replaced with |
+|---|---|---|
+| `{APP-NAME}` | the chart directory `helm/{APP-NAME}`, `Chart.yaml`, `values.yaml`, `.abs/main.yaml`, `CHANGELOG.md`, this README | the repository name |
+| `{TEAM-NAME}` | the `io.giantswarm.application.team` annotation in `Chart.yaml` | the owning team's short name, e.g. `shield` for team-shield |
+| `{APP HELM REPOSITORY}` | this README | the upstream Helm repository the chart is based on |
+
+The chart ships with the default Giant Swarm icon (`https://s.giantswarm.io/app-icons/giantswarm/1/light.svg`),
+so that the first build passes the icon checks. It is a default, not a placeholder: replace it with the app's
+own icon by adding it to [web-assets](https://github.com/giantswarm/web-assets) and setting the final URL as
+`icon` in `Chart.yaml`.
+
+Remove this section from the README of the created repository.
+
 # {APP-NAME} chart
 
 Giant Swarm offers a {APP-NAME} App which can be installed in workload clusters.
