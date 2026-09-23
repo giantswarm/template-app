@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- fixed: the chart label helper trims every `-`, `.` and `_` at the ends of the 63-character cut, so `helm.sh/chart` is a valid label value for any chart version; the cut of a long branch or helm-controller version could end in `.`, `_` or `--.`, and the API server refused every labelled object ([#70](https://github.com/giantswarm/template-app/issues/70)).
 - changed: the chart's team annotation is the `{TEAM-NAME}` placeholder (the brace convention of `{APP-NAME}`), filled with the team's short name when a repository is created; the default Giant Swarm icon is documented as a default to replace, and the README lists every placeholder ([#66](https://github.com/giantswarm/template-app/issues/66)).
 - added: Artifact Hub metadata (`artifacthub.io/license`, `artifacthub.io/links`) in the chart template ([roadmap#3940](https://github.com/giantswarm/roadmap/issues/3940)).
 
