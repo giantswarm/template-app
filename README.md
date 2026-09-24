@@ -6,13 +6,20 @@
 ## Creating a repository from this template
 
 A repository is created from this template by the repository set-up engine (`devctl`), which replaces the
-placeholders below and pushes the result as the first commit. When copying by hand, replace them yourself.
+placeholders below, renames the chart directory `helm/{APP-NAME}` and pushes the result as the first commit. When
+copying by hand, rename the chart directory and replace them yourself
+(`devctl replace -i '{APP-NAME}' <name> --ignore '.git/**' '**'`, likewise for the other two).
 
 | Placeholder | Where | Replaced with |
 |---|---|---|
 | `{APP-NAME}` | the chart directory `helm/{APP-NAME}`, `Chart.yaml`, `values.yaml`, `.abs/main.yaml`, `CHANGELOG.md`, this README | the repository name |
 | `{TEAM-NAME}` | the `io.giantswarm.application.team` annotation in `Chart.yaml` | the owning team's short name, e.g. `shield` for team-shield |
 | `{APP HELM REPOSITORY}` | this README | the upstream Helm repository the chart is based on |
+
+The tokens are braced, unlike `REPOSITORY_NAME` in the Go service template: a Go module path may not contain
+braces, so that template's token is brace-less. The engine's replacement pass handles both forms, so a repository
+is created from either template the same way; only when copying by hand does the pattern differ (`{APP-NAME}`
+here, `REPOSITORY_NAME` there).
 
 The chart ships with the default Giant Swarm icon (`https://s.giantswarm.io/app-icons/giantswarm/1/light.svg`),
 so that the first build passes the icon checks. It is a default, not a placeholder: replace it with the app's
