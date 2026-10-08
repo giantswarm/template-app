@@ -5,7 +5,7 @@
 # workflow in .circleci/config.yml merges into this file at pipeline runtime.
 version: 2.1
 orbs:
-  architect: giantswarm/architect@10.5.0
+  architect: giantswarm/architect@10.12.1
 
 jobs:
   # Chart build of a template repository (componentType: template in the
@@ -23,6 +23,11 @@ jobs:
   build-chart:
     executor: architect/app-build-suite
     resource_class: small
+    environment:
+      # The rendered chart pulls the images of a repository created from this
+      # template, which no registry carries, so app-build-suite's check that
+      # every gsoci image reference resolves cannot pass here.
+      ABS_DISABLE_HELM_IMAGE_REFERENCE_VALIDATOR: "true"
     steps:
     - checkout
     - run:
