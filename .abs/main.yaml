@@ -2,3 +2,4 @@ replace-chart-version-with-git: true
 generate-metadata: true
 chart-dir: ./helm/{APP-NAME}
 destination: ./build
+helm-template-extra-values: ./helm/{APP-NAME}/ci/ci-values.yaml

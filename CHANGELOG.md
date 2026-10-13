@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- added: `helm/{APP-NAME}/ci/ci-values.yaml` and `helm-template-extra-values` in `.abs/main.yaml`, so a chart with `required` values passes app-build-suite's template validation on a new repository's first pull request; the chart README names the file ([#79](https://github.com/giantswarm/template-app/issues/79)).
 - changed: the README documents why the placeholders are braced while the Go service template's `REPOSITORY_NAME` is not, that the engine handles both forms, and the `devctl replace` command for copying by hand.
 - fixed: the chart label helper trims every `-`, `.` and `_` at the ends of the 63-character cut, so `helm.sh/chart` is a valid label value for any chart version; the cut of a long branch or helm-controller version could end in `.`, `_` or `--.`, and the API server refused every labelled object ([#70](https://github.com/giantswarm/template-app/issues/70)).
 - changed: the chart's team annotation is the `{TEAM-NAME}` placeholder (the brace convention of `{APP-NAME}`), filled with the team's short name when a repository is created; the default Giant Swarm icon is documented as a default to replace, and the README lists every placeholder ([#66](https://github.com/giantswarm/template-app/issues/66)).
