@@ -7,13 +7,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-- added: `helm/{APP-NAME}/ci/ci-values.yaml` and `helm-template-extra-values` in `.abs/main.yaml`, so a chart with `required` values passes app-build-suite's template validation on a new repository's first pull request; the chart README names the file ([#79](https://github.com/giantswarm/template-app/issues/79)).
-- changed: the README documents why the placeholders are braced while the Go service template's `REPOSITORY_NAME` is not, that the engine handles both forms, and the `devctl replace` command for copying by hand.
-- fixed: the chart label helper trims every `-`, `.` and `_` at the ends of the 63-character cut, so `helm.sh/chart` is a valid label value for any chart version; the cut of a long branch or helm-controller version could end in `.`, `_` or `--.`, and the API server refused every labelled object ([#70](https://github.com/giantswarm/template-app/issues/70)).
-- changed: the chart's team annotation is the `{TEAM-NAME}` placeholder (the brace convention of `{APP-NAME}`), filled with the team's short name when a repository is created; the default Giant Swarm icon is documented as a default to replace, and the README lists every placeholder ([#66](https://github.com/giantswarm/template-app/issues/66)).
-- added: Artifact Hub metadata (`artifacthub.io/license`, `artifacthub.io/links`) in the chart template ([roadmap#3940](https://github.com/giantswarm/roadmap/issues/3940)).
+## [0.3.0-rc.1] - 2026-10-13
 
+- added: `helm/{APP-NAME}/ci/ci-values.yaml` and `helm-template-extra-values` in `.abs/main.yaml`, so a chart with `required` values passes app-build-suite's template validation on a new repository's first pull request; the chart README names the file ([#79](https://github.com/giantswarm/template-app/issues/79)).
+
+## [0.2.2-rc.1] - 2026-09-29
+
+- changed: the README documents why the placeholders are braced while the Go service template's `REPOSITORY_NAME` is not, that the engine handles both forms, and the `devctl replace` command for copying by hand.
+
+## [0.2.1] - 2026-09-23
+
+- fixed: the chart label helper trims every `-`, `.` and `_` at the ends of the 63-character cut, so `helm.sh/chart` is a valid label value for any chart version; the cut of a long branch or helm-controller version could end in `.`, `_` or `--.`, and the API server refused every labelled object ([#70](https://github.com/giantswarm/template-app/issues/70)).
+
+## [0.2.0] - 2026-09-16
+
+- changed: the chart's team annotation is the `{TEAM-NAME}` placeholder (the brace convention of `{APP-NAME}`), filled with the team's short name when a repository is created; the default Giant Swarm icon is documented as a default to replace, and the README lists every placeholder ([#66](https://github.com/giantswarm/template-app/issues/66)).
+
+## [0.1.0] - 2026-09-16
+
+- added: Artifact Hub metadata (`artifacthub.io/license`, `artifacthub.io/links`) in the chart template ([roadmap#3940](https://github.com/giantswarm/roadmap/issues/3940)).
 - changed: Regenerated `.circleci` config with `devctl gen circleci` — adopt the dynamic-config setup workflow (`config.yml` + `workflows.yml`) and bump the architect orb to v9.5.2.
 - changed: `app.giantswarm.io` label group was changed to `application.giantswarm.io`
 
-[Unreleased]: https://github.com/giantswarm/{APP-NAME}/tree/main
+[Unreleased]: https://github.com/giantswarm/{APP-NAME}/compare/v0.3.0-rc.1...HEAD
+[0.3.0-rc.1]: https://github.com/giantswarm/{APP-NAME}/compare/v0.2.2-rc.1...v0.3.0-rc.1
+[0.2.2-rc.1]: https://github.com/giantswarm/{APP-NAME}/compare/v0.2.1...v0.2.2-rc.1
+[0.2.1]: https://github.com/giantswarm/{APP-NAME}/compare/v0.2.0...v0.2.1
+[0.2.0]: https://github.com/giantswarm/{APP-NAME}/compare/v0.1.0...v0.2.0
+[0.1.0]: https://github.com/giantswarm/{APP-NAME}/releases/tag/v0.1.0
