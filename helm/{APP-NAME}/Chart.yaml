@@ -14,6 +14,9 @@ description: Please add description
 
 # URL of the GitHub repository that is the source of this Chart.yaml file.
 home: https://github.com/giantswarm/{APP-NAME}
+# Replace with 1-3 topical keywords, used for search in the catalog.
+keywords:
+  - "{KEYWORD}"
 
 # Default Giant Swarm icon, so that the first build passes the icon checks.
 # Replace it with the app's own icon: add it to https://github.com/giantswarm/web-assets
